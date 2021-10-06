@@ -25,7 +25,7 @@ test.describe('basic test', () => {
     browser.close;
   });
 
-  test('1', async () => {
+  test('cTid creation', async () => {
     let login_page: LoginPage = new LoginPage(page);
     let main_page: MainPage = new MainPage(page);
 
@@ -40,7 +40,7 @@ test.describe('basic test', () => {
     await login_page.isOpened();
   });
 
-  test('2', async () => {
+  test('Log In', async () => {
     let login_page: LoginPage = new LoginPage(page);
     let main_page: MainPage = new MainPage(page);
 
@@ -55,7 +55,7 @@ test.describe('basic test', () => {
     await main_page.closeTab();
   });
 
-  test('3', async () => {
+  test('Add a new Demo account', async () => {
     let login_page: LoginPage = new LoginPage(page);
     let main_page: MainPage = new MainPage(page);
 
