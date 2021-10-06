@@ -11,6 +11,8 @@ test.describe('basic test', () => {
   let context: BrowserContext;
   let page: Page;
 
+  console.log(email + " " + password);
+
   test.beforeAll(async () => {
       browser = await chromium.launch({
             headless: false
@@ -18,6 +20,10 @@ test.describe('basic test', () => {
         context = await browser.newContext()
         page = await context.newPage();
     })
+
+  test.afterAll(async () => {
+    browser.close;
+  });
 
   test('1', async () => {
     let login_page: LoginPage = new LoginPage(page);
