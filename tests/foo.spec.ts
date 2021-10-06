@@ -11,15 +11,11 @@ test.describe('basic test', () => {
   let context: BrowserContext;
   let page: Page;
 
-  console.log(email + " " + password);
-
-  test.beforeAll(async () => {
-      browser = await chromium.launch({
-            headless: false
-        });
-        context = await browser.newContext()
-        page = await context.newPage();
-    })
+  test.beforeEach(async () => {
+    browser = await chromium.launch({headless: false});
+    context = await browser.newContext()
+    page = await context.newPage();
+  })
 
   test.afterAll(async () => {
     browser.close;
